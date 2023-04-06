@@ -1,0 +1,22 @@
+name: Cypress Tests
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm install
+      - name: Build Application
+        run: npm run build
+      - name: Start server
+        run: npm start  
+      - name: Run Cypress Tests
+        run: npm run cypress:run
+      - name: Publish Screenshots
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: Screenshots
+          path: cypress/screenshots
