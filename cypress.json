@@ -3,5 +3,5 @@
     "experimentalSessionAndOrigin": true,
     "video": false,
     "screenshotsFolder": "cypress/screenshots",
-    "chromeWebSecurity": false;   
+    "chromeWebSecurity": false   
 }
