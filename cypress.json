@@ -2,5 +2,6 @@
     "baseUrl": "http://localhost:3000",
     "experimentalSessionAndOrigin": true,
     "video": false,
-    "screenshotsFolder": "cypress/screenshots"
+    "screenshotsFolder": "cypress/screenshots",
+    "chromeWebSecurity": false;   
 }
