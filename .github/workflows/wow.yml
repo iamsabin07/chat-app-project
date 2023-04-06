@@ -15,3 +15,9 @@ jobs:
         with:
           build: npm run build
           start: npm start
+      - name: Publish Screenshots
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: Screenshots
+          path: cypress/screenshots
